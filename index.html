@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soma Chatterjee | Cyber Security & Product Analyst Portfolio</title>
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Load AOS for Scroll Animations --><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom Tailwind Configuration for the Aesthetic --><script>
+    <title>Soma Chatterjee | Cybersecurity, Software Engineering & Product Analytics</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load AOS for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Tailwind Configuration for the Aesthetic -->
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // Custom palette based on user request: Clean, Minimalist, Light Pink/Peach/Beige
-                        'primary': '#E84D8A',       // Vibrant Rose/Pink (Replaces purple, for strong accents)
-                        'secondary': '#f4a261',     // Soft peach/orange for subtle highlights
+                        'primary': '#E84D8A',          // Vibrant Rose/Pink for strong accents
+                        'secondary': '#f4a261',        // Soft peach/orange for subtle highlights
                         'background-light': '#fefcfb', // Near-white beige background
-                        'card-bg': '#ffffff',        // White card background
-                        'text-dark': '#333333',      // Dark gray for readability
-                        'text-muted': '#7f8c8d',     // Muted gray for secondary text
-                        'accent-pink': '#f3d6c7',    // Very light pinkish beige
+                        'card-bg': '#ffffff',           // White card background
+                        'text-dark': '#333333',         // Dark gray for readability
+                        'text-muted': '#6b7280',        // Muted gray for secondary text
+                        'accent-pink': '#f3d6c7',       // Light pinkish beige
+                        'tag-bg': '#fdf2f4',           // Soft pink tag background
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -28,7 +32,8 @@
             }
         }
     </script>
-    <!-- Custom CSS for subtle effects and wave animation --><style>
+    <!-- Custom CSS for subtle effects and wave animation -->
+    <style>
         .section-title {
             position: relative;
             display: inline-block;
@@ -48,7 +53,7 @@
             border-radius: 9999px;
         }
         .icon-link:hover .icon {
-            transform: scale(1.1);
+            transform: scale(1.12);
             color: theme('colors.primary');
         }
         .icon-link {
@@ -56,11 +61,11 @@
         }
         .card-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-shadow:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
         }
 
         /* Wavy background for Hero section */
@@ -68,7 +73,6 @@
             background: linear-gradient(135deg, theme('colors.accent-pink') 0%, theme('colors.primary') 100%);
             position: relative;
             overflow: hidden;
-            /* New: Subtle pulsing glow effect to make it stand out */
             animation: pulse-glow 3s ease-in-out infinite alternate; 
         }
 
@@ -82,7 +86,6 @@
             background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path fill="%23f3d6c7" d="M0,10 C30,15 70,0 100,5 L100,20 L0,20 Z" /></svg>');
             background-size: 50% 100%;
             background-repeat: repeat-x;
-            /* Speed up wave slightly for more dynamic feel */
             animation: wave 8s linear infinite alternate; 
             opacity: 0.3;
         }
@@ -92,10 +95,9 @@
             100% { transform: translateX(-50%); }
         }
         
-        /* Keyframes for the new pulsing glow */
         @keyframes pulse-glow {
-            0% { box-shadow: 0 0 10px rgba(232, 77, 138, 0.4); } /* primary color with low opacity */
-            100% { box-shadow: 0 0 20px rgba(232, 77, 138, 0.7); } /* primary color with higher opacity */
+            0% { box-shadow: 0 0 10px rgba(232, 77, 138, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(232, 77, 138, 0.6); }
         }
     </style>
 </head>
@@ -104,223 +106,434 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
 
-        <!-- 1. HERO SECTION (Text color changed to black) --><section id="hero" class="text-center py-20 md:py-32 bg-accent-pink/30 rounded-xl mb-16 shadow-lg wavy-background" data-aos="fade-up">
-            <div class="max-w-3xl mx-auto relative z-10">
-                <h1 class="text-6xl md:text-7xl font-extrabold text-black leading-tight drop-shadow-lg">
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="text-center py-20 md:py-28 bg-accent-pink/30 rounded-2xl mb-16 shadow-lg wavy-background" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto relative z-10 px-4">
+                <span class="inline-block bg-white/80 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 shadow-sm backdrop-blur-sm">
+                    <span class="font-bold">Primary Focus:</span> Product Management &bull; Product Analytics &nbsp;|&nbsp; Full-Stack Engineering &bull; Cybersecurity
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-black leading-tight drop-shadow-md">
                     Soma Chatterjee
                 </h1>
-                <p class="text-2xl md:text-3xl font-light text-black mt-4 mb-6 drop-shadow">
-                    B.Tech. CSE (Cyber Security & Forensics) Student
+                <p class="text-2xl md:text-3xl font-light text-black mt-3 mb-5 drop-shadow">
+                    Product Analyst & Aspiring Product Manager &bull; Software Engineer &bull; Cybersecurity
                 </p>
-                <p class="text-xl text-black max-w-2xl mx-auto drop-shadow">
-                    A passionate third-year engineer specializing in <span class="font-bold">Cybersecurity and Forensics</span>, currently leveraging analytical and design skills as a <span class="font-bold">Product Analyst Intern</span> to drive feature innovation and user-centric solutions.
+                <p class="text-lg md:text-xl text-black/90 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-normal">
+                    Pre-final year Computer Science Engineering student specializing in Cyber Security & Forensics, with a primary focus on <span class="font-bold text-black">Product Management and Product Analytics</span>. Bridging user empathy, PRDs, and SQL telemetry with a strong technical foundation in full-stack software development (Node.js, React, Java, Python).
                 </p>
-                <div class="mt-8 flex justify-center space-x-6">
-                    <a href="https://www.linkedin.com/in/soma-chatterjee-5a31662a6/" target="_blank" class="icon-link">
-                        <i data-lucide="linkedin" class="w-8 h-8 text-black icon transition drop-shadow"></i>
+                <div class="mt-8 flex justify-center items-center space-x-6">
+                    <a href="https://linkedin.com/in/soma-chatterjee-" target="_blank" rel="noopener noreferrer" class="icon-link p-2.5 bg-white/85 rounded-full shadow-sm hover:bg-white" title="LinkedIn">
+                        <i data-lucide="linkedin" class="w-6 h-6 text-black icon transition"></i>
                     </a>
-                    <a href="https://github.com/Soma-Chatterjee" target="_blank" class="icon-link">
-                        <i data-lucide="github" class="w-8 h-8 text-black icon transition drop-shadow"></i>
+                    <a href="https://github.com/Soma-Chatterjee" target="_blank" rel="noopener noreferrer" class="icon-link p-2.5 bg-white/85 rounded-full shadow-sm hover:bg-white" title="GitHub">
+                        <i data-lucide="github" class="w-6 h-6 text-black icon transition"></i>
                     </a>
-                    <a href="mailto:somac1231@gmail.com" class="icon-link">
-                        <i data-lucide="mail" class="w-8 h-8 text-black icon transition drop-shadow"></i>
+                    <a href="https://ecosense-ai-dun.vercel.app" target="_blank" rel="noopener noreferrer" class="icon-link p-2.5 bg-white/85 rounded-full shadow-sm hover:bg-white" title="Live Project Demo">
+                        <i data-lucide="globe" class="w-6 h-6 text-black icon transition"></i>
+                    </a>
+                    <a href="mailto:somac1231@gmail.com" class="icon-link p-2.5 bg-white/85 rounded-full shadow-sm hover:bg-white" title="Email Me">
+                        <i data-lucide="mail" class="w-6 h-6 text-black icon transition"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 2. EDUCATION & ABOUT --><section id="about" class="grid md:grid-cols-3 gap-8 mb-16" data-aos="fade-up" data-aos-delay="100">
+        <!-- 2. EDUCATION & ABOUT -->
+        <section id="about" class="grid md:grid-cols-3 gap-8 mb-16" data-aos="fade-up" data-aos-delay="100">
             <div class="md:col-span-2">
                 <h2 class="text-3xl section-title">Education</h2>
                 <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50">
-                    <h3 class="text-xl font-semibold text-primary"><i data-lucide="graduation-cap" class="inline w-6 h-6 mr-2 text-secondary"></i>B.Tech. Computer Science Engineering</h3>
-                    <p class="text-lg text-text-dark mt-1">Specialization in Cyber Security and Forensics</p>
+                    <h3 class="text-xl font-semibold text-primary flex items-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-2 text-secondary"></i>
+                        B.Tech in Computer Science & Engineering
+                    </h3>
+                    <p class="text-lg text-text-dark mt-1 font-medium">Specialization in Cyber Security and Forensics</p>
                     <p class="text-text-muted">Adamas University | Expected Graduation: 2027</p>
                     <ul class="list-disc list-inside mt-3 text-text-dark space-y-1">
-                        <li><span class="font-bold">Current CGPA:</span> 8.78</li>
-                        <li><span class="font-bold">Key Coursework:</span> Cryptography, Data Structures and Algorithm, Web Application Designing.</li>
+                        <li><span class="font-bold">CGPA:</span> 8.47 / 10.0</li>
+                        <li><span class="font-bold">Core Coursework:</span> Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Web Application Development, Operating Systems, Cryptography & Network Security.</li>
                     </ul>
                 </div>
             </div>
             <div class="md:col-span-1">
                 <h2 class="text-3xl section-title">Profile</h2>
                 <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50">
-                    <p class="text-lg font-medium text-text-dark"><i data-lucide="map-pin" class="inline w-5 h-5 mr-2 text-secondary"></i>Location:</p>
-                    <p class="text-text-muted">Kolkata, India</p>
-                    <p class="text-lg font-medium text-text-dark mt-4"><i data-lucide="calendar" class="inline w-5 h-5 mr-2 text-secondary"></i>Expected Graduation:</p>
-                    <p class="text-text-muted">2027</p>
+                    <p class="text-lg font-medium text-text-dark flex items-center">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-secondary"></i>Location:
+                    </p>
+                    <p class="text-text-muted pl-7">Kolkata, West Bengal, India</p>
+                    <p class="text-lg font-medium text-text-dark mt-4 flex items-center">
+                        <i data-lucide="sparkles" class="w-5 h-5 mr-2 text-secondary"></i>Core Interests:
+                    </p>
+                    <p class="text-text-dark pl-7 text-sm leading-relaxed">
+                        <span class="font-bold text-primary">Primary:</span> Product Management &bull; Product Analytics &bull; Technical Product Strategy<br>
+                        <span class="font-semibold text-text-muted">Also Passionate About:</span> Full-Stack Software Engineering &bull; Cybersecurity &bull; UI/UX
+                    </p>
+                    <p class="text-lg font-medium text-text-dark mt-4 flex items-center">
+                        <i data-lucide="target" class="w-5 h-5 mr-2 text-secondary"></i>Target Roles:
+                    </p>
+                    <p class="text-text-dark pl-7 text-sm leading-relaxed">
+                        <span class="font-bold text-primary">Lead Focus:</span> Associate Product Manager (APM) &bull; Product Analyst &bull; Technical PM<br>
+                        <span class="font-semibold text-text-muted">Also Exploring:</span> Software Development Engineer (Full-Stack / Backend) &bull; Security Analyst
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. EXPERIENCE SECTION --><section id="experience" class="mb-16" data-aos="fade-up" data-aos-delay="150">
-            <h2 class="text-3xl section-title">Experience</h2>
+        <!-- 3. BALANCED TECHNICAL SKILLS -->
+        <section id="skills" class="mb-16" data-aos="fade-up" data-aos-delay="150">
+            <h2 class="text-3xl section-title">Product & Technical Skills</h2>
             <div class="bg-card-bg p-8 rounded-xl card-shadow border border-accent-pink/50">
-                <div class="flex justify-between items-start flex-wrap">
-                    <h3 class="text-2xl font-bold text-primary"><i data-lucide="briefcase" class="inline w-6 h-6 mr-2 text-secondary"></i>Product Analyst Intern</h3>
-                    <span class="text-text-muted text-sm md:text-base">(Nov 2025 - Present)</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product Strategy & Management -->
+                    <div class="p-4 rounded-lg bg-background-light border border-accent-pink/30">
+                        <h4 class="font-semibold text-lg text-primary border-b pb-1 mb-2 border-accent-pink flex items-center">
+                            <i data-lucide="layers" class="w-5 h-5 mr-2 text-secondary"></i>Product Strategy
+                        </h4>
+                        <p class="text-text-dark font-medium leading-relaxed text-sm">
+                            PRDs, User Stories, Wireframing (Figma), Feature Prioritization, User Journey Mapping, Sprint Planning, Agile/Scrum, Jira, Market Research
+                        </p>
+                    </div>
+                    <!-- Product Analytics & Data -->
+                    <div class="p-4 rounded-lg bg-background-light border border-accent-pink/30">
+                        <h4 class="font-semibold text-lg text-primary border-b pb-1 mb-2 border-accent-pink flex items-center">
+                            <i data-lucide="trending-up" class="w-5 h-5 mr-2 text-secondary"></i>Product Analytics
+                        </h4>
+                        <p class="text-text-dark font-medium leading-relaxed text-sm">
+                            MySQL, Advanced SQL Queries, Telemetry Analysis, KPI Tracking, Feature Adoption Metrics, Excel, Tableau, Power BI, MongoDB
+                        </p>
+                    </div>
+                    <!-- Technical & Software Architecture -->
+                    <div class="p-4 rounded-lg bg-background-light border border-accent-pink/30">
+                        <h4 class="font-semibold text-lg text-primary border-b pb-1 mb-2 border-accent-pink flex items-center">
+                            <i data-lucide="code-2" class="w-5 h-5 mr-2 text-secondary"></i>Technical Stack
+                        </h4>
+                        <p class="text-text-dark font-medium leading-relaxed text-sm">
+                            RESTful API Specifications, Data Schemas, Node.js, React.js, Express.js, Java, Python, JavaScript (ES6+), Vite, Tailwind CSS, Vercel
+                        </p>
+                    </div>
+                    <!-- Cybersecurity & Systems -->
+                    <div class="p-4 rounded-lg bg-background-light border border-accent-pink/30">
+                        <h4 class="font-semibold text-lg text-primary border-b pb-1 mb-2 border-accent-pink flex items-center">
+                            <i data-lucide="shield-check" class="w-5 h-5 mr-2 text-secondary"></i>Cyber & Systems
+                        </h4>
+                        <p class="text-text-dark font-medium leading-relaxed text-sm">
+                            Cryptography (RSA, AES-256, SHA), Network Packet Inspection (Wireshark), Vulnerability Assessment, SecOps, Google Cloud, AWS
+                        </p>
+                    </div>
                 </div>
-                <p class="text-xl font-medium text-text-dark mb-4">Adamas Tech Consulting</p>
-                <ul class="list-disc list-outside ml-5 space-y-3 text-text-dark">
-                    <li><span class="font-bold">Product Design & Strategy:</span> Developed <span class="font-bold">wireframes and user stories</span> for a new product module based on comprehensive market research and competitor analysis, guiding the product through its initial conceptual phase.</li>
-                    <li><span class="font-bold">Documentation & Development:</span> Authored the <span class="font-bold">Product Requirements Document (PRD)</span> and designed web application pages from scratch in <span class="font-bold">Figma</span>, translating design into functional prototypes using <span class="font-bold">HTML, CSS, JavaScript, React, and Bootstrap</span>.</li>
-                    <li><span class="font-bold">Feature Enhancement:</span> Suggested and documented <span class="font-bold">new features</span> to include in an existing web application, focusing on enhancing core user functionalities and improving the overall user experience.</li>
-                    <li><span class="font-bold">UI/UX Implementation:</span> Selected and applied a suitable <span class="font-bold">theme</span> for the web application, ensuring consistency and alignment with modern UI/UX principles during frontend implementation.</li>
-                </ul>
             </div>
         </section>
 
-        <!-- 4. SKILLS SECTION --><section id="skills" class="mb-16" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-3xl section-title">Technical Skills</h2>
-            <div class="bg-card-bg p-8 rounded-xl card-shadow border border-accent-pink/50">
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Languages --><div>
-                        <h4 class="font-semibold text-lg text-secondary border-b pb-1 mb-2 border-accent-pink flex items-center"><i data-lucide="code" class="w-5 h-5 mr-2"></i>Languages</h4>
-                        <p class="text-text-dark">Python, C++, Java, JavaScript, SQL</p>
+        <!-- 4. PROFESSIONAL EXPERIENCE -->
+        <section id="experience" class="mb-16" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl section-title">Professional Experience</h2>
+            <div class="space-y-6">
+
+                <!-- Role 1: Adamas Tech Consulting -->
+                <div class="bg-card-bg p-8 rounded-xl card-shadow border border-accent-pink/50">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary flex items-center">
+                                <i data-lucide="briefcase" class="w-6 h-6 mr-2 text-secondary"></i>
+                                Product Analyst Intern
+                            </h3>
+                            <p class="text-lg font-medium text-text-dark">Adamas Tech Consulting</p>
+                        </div>
+                        <span class="text-text-muted text-sm md:text-base bg-tag-bg px-3 py-1 rounded-full font-medium">Nov 2025 - Feb 2026 | Kolkata, India</span>
                     </div>
-                    <!-- Cybersecurity/Forensics --><div>
-                        <h4 class="font-semibold text-lg text-secondary border-b pb-1 mb-2 border-accent-pink flex items-center"><i data-lucide="shield" class="w-5 h-5 mr-2"></i>Cybersecurity & Forensics</h4>
-                        <p class="text-text-dark">Nmap, Burp Suite, Metasploit, OSINT, Cryptography (RSA/AES)</p>
-                    </div>
-                    <!-- Data/Analytics --><div>
-                        <h4 class="font-semibold text-lg text-secondary border-b pb-1 mb-2 border-accent-pink flex items-center"><i data-lucide="trending-up" class="w-5 h-5 mr-2"></i>Data & Analytics</h4>
-                        <p class="text-text-dark">Microsoft Excel, Tableau, Power BI, Pandas</p>
-                    </div>
-                    <!-- Web Development --><div>
-                        <h4 class="font-semibold text-lg text-secondary border-b pb-1 mb-2 border-accent-pink flex items-center"><i data-lucide="layout-grid" class="w-5 h-5 mr-2"></i>Web & UI/UX</h4>
-                        <p class="text-text-dark">React, Tailwind CSS, HTML, CSS, JavaScript, Figma, Canva</p>
-                    </div>
+                    <ul class="list-disc list-outside ml-5 mt-4 space-y-2 text-text-dark">
+                        <li>Authored comprehensive <span class="font-bold">Product Requirements Documents (PRDs)</span> and designed UI wireframes and user flows in <span class="font-bold">Figma</span>, translating design concepts into interactive web prototypes.</li>
+                        <li>Collaborated closely with engineering stakeholders to define <span class="font-bold">REST API endpoints, data schemas, and database specifications</span>, accelerating release rollouts by <span class="font-bold text-primary">15%</span>.</li>
+                        <li>Queried and analyzed <span class="font-bold">MySQL</span> databases using SQL to investigate user telemetry and feature performance, resolving data bottlenecks and aligning technical deliverables with business goals.</li>
+                        <li>Created <span class="font-bold">15+ technical requirements and user stories</span> in Jira, streamlining sprint alignment and reducing developer-stakeholder alignment cycles by <span class="font-bold text-primary">25%</span> while driving an <span class="font-bold text-primary">18% increase in feature adoption</span>.</li>
+                    </ul>
                 </div>
+
+                <!-- Role 2: Infosys Springboard -->
+                <div class="bg-card-bg p-8 rounded-xl card-shadow border border-accent-pink/50">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary flex items-center">
+                                <i data-lucide="code-2" class="w-6 h-6 mr-2 text-secondary"></i>
+                                Project Intern (Java Technology Stack)
+                            </h3>
+                            <p class="text-lg font-medium text-text-dark">Infosys Springboard</p>
+                        </div>
+                        <span class="text-text-muted text-sm md:text-base bg-tag-bg px-3 py-1 rounded-full font-medium">Feb 2026 - Apr 2026 | Remote</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 mt-4 space-y-2 text-text-dark">
+                        <li>Managed end-to-end development of <span class="font-bold">SkillForge</span>, an AI-driven adaptive learning and examination platform, progressing from workflow diagrams to backend logic and automated assessment workflows.</li>
+                        <li>Analyzed user feedback and bug tracking data to systematically debug services, achieving a <span class="font-bold text-primary">92% code quality rating with zero critical release defects</span>.</li>
+                        <li>Actively participated in Agile ceremonies including daily stand-ups, backlog grooming, and sprint planning while maintaining clean version control practices via Git.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 3: ISI IDEAS Hub -->
+                <div class="bg-card-bg p-8 rounded-xl card-shadow border border-accent-pink/50">
+                    <div class="flex justify-between items-start flex-wrap gap-2">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary flex items-center">
+                                <i data-lucide="flask-conical" class="w-6 h-6 mr-2 text-secondary"></i>
+                                Project Intern (Research & Process Diagnostics)
+                            </h3>
+                            <p class="text-lg font-medium text-text-dark">IDEAS Hub, Indian Statistical Institute (ISI)</p>
+                        </div>
+                        <span class="text-text-muted text-sm md:text-base bg-tag-bg px-3 py-1 rounded-full font-medium">May 2026 - Aug 2026 | Kolkata, India</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 mt-4 space-y-2 text-text-dark">
+                        <li>Developed a Python-based analytical pipeline for the RARE 2026 Challenge, extracting 384-dimensional feature embeddings with domain-pretrained Vision Transformers and evaluating K-Means/Fuzzy C-Means clustering.</li>
+                        <li>Diagnosed an <span class="font-bold">18.6:1 class imbalance</span> producing misleading 94.9% accuracy; applied root-cause analysis and recommended imbalance-aware methodologies to validate analytical assumptions.</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
-        <!-- 5. PROJECTS SECTION --><section id="projects" class="mb-16" data-aos="fade-up" data-aos-delay="250">
+        <!-- 5. SELECTED PROJECTS ACROSS DOMAINS -->
+        <section id="projects" class="mb-16" data-aos="fade-up" data-aos-delay="250">
             <h2 class="text-3xl section-title">Selected Projects</h2>
 
-            <!-- Cybersecurity & Forensics Projects --><h3 class="text-2xl font-bold text-primary mt-8 mb-4 flex items-center"><i data-lucide="lock" class="w-6 h-6 mr-2 text-secondary"></i>Cybersecurity & Forensics</h3>
-            <div class="space-y-6">
-                <!-- Project 1 --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex justify-between items-center mb-2">
-                        <a href="https://github.com/Soma-Chatterjee" target="_blank" class="text-xl font-semibold text-text-dark hover:text-secondary transition duration-300">
-                            Secure Message Encryption & Decryption System
-                            <i data-lucide="external-link" class="inline w-4 h-4 ml-1"></i>
-                        </a>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="key" class="inline w-4 h-4 mr-1"></i>Cryptography | Full-Stack</span>
+            <!-- Track 1: Cybersecurity & Forensics -->
+            <h3 class="text-2xl font-bold text-primary mt-6 mb-4 flex items-center">
+                <i data-lucide="lock" class="w-6 h-6 mr-2 text-secondary"></i>Cybersecurity & Cryptography
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+                <!-- Project 1: Secure Messenger & Cryptographic Vault -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">Secure Message Encryption & Decryption System</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">Cryptography</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Built a cryptographic platform for secure communications and file storage leveraging <span class="font-bold">AES-256, RSA, SHA-256, and JWT authentication</span>. Implemented secure key exchange protocols and encrypted tamper-evident audit logs.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Java</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Python</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">AES-256</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">RSA</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">JWT</span>
+                        </div>
                     </div>
-                    <p class="text-text-muted mb-3">Built a full-stack cryptographic web app for secure messaging using <span class="font-bold">RSA, AES, SHA-256, and DSA</span>. Included a secure database for encrypted logs and <span class="font-bold">JWT Authentication</span>.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Python (Flask/FastAPI), Cryptography Library, React.js, MongoDB, JWT.
-                    </p>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <a href="https://github.com/Soma-Chatterjee/SecureFileVault-AES-256-File-Encryption-System-Java-" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>SecureFileVault Repo
+                        </a>
+                        <a href="https://github.com/Soma-Chatterjee/SecureMessenger-End-to-End-Encrypted-Messaging-Backend" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-text-dark hover:text-primary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>SecureMessenger Repo
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Project 2 --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="350">
-                    <div class="flex justify-between items-center mb-2">
-                        <a href="https://github.com/Soma-Chatterjee" target="_blank" class="text-xl font-semibold text-text-dark hover:text-secondary transition duration-300">
-                            Network Packet Capture & Attack Analysis
-                            <i data-lucide="external-link" class="inline w-4 h-4 ml-1"></i>
-                        </a>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="globe" class="inline w-4 h-4 mr-1"></i>Network Security | Forensics</span>
+                <!-- Project 2: Network Traffic Capture & Vulnerability Scanner -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">Network Traffic Inspection & Vulnerability Scanner</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">Security Ops</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Performed real-time network protocol analysis to detect anomalies such as ARP spoofing, DNS poisoning, and port scans. Developed automated scanning scripts integrating OWASP ZAP API to detect injection risks.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Wireshark</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">TCPDump</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Nmap</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Python (Scapy)</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Kali Linux</span>
+                        </div>
                     </div>
-                    <p class="text-text-muted mb-3">Performed live network traffic monitoring to detect anomalies like <span class="font-bold">ARP spoofing, DNS poisoning, and port scanning</span>. Generated reports from protocol-level inspection.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Wireshark, TCPDump, Kali Linux, Nmap, Python (Scapy), OSINT Tools.
-                    </p>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <a href="https://github.com/Soma-Chatterjee/Penetration-Testing-Assignment" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>Security Audit Report
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Project 3 --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex justify-between items-center mb-2">
-                        <a href="https://github.com/Soma-Chatterjee" target="_blank" class="text-xl font-semibold text-text-dark hover:text-secondary transition duration-300">
-                            Web Application Vulnerability Scanner
-                            <i data-lucide="external-link" class="inline w-4 h-4 ml-1"></i>
-                        </a>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="bug" class="inline w-4 h-4 mr-1"></i>Vulnerability Assessment</span>
-                    </div>
-                    <p class="text-text-muted mb-3">Developed an automated scanner detecting common vulnerabilities (<span class="font-bold">XSS, SQL Injection, CSRF</span>) and misconfigurations. Integrated a severity-based reporting module.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Python, OWASP ZAP API, SQLMap, Python Requests.
-                    </p>
-                </div>
             </div>
 
-            <!-- Product Analysis & Web Development Projects --><h3 class="text-2xl font-bold text-primary mt-12 mb-4 flex items-center"><i data-lucide="layers" class="w-6 h-6 mr-2 text-secondary"></i>Product Analysis & Web Development</h3>
-            <div class="space-y-6">
-                <!-- Project 4 (Digital Wallet Web Application) --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="450">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xl font-semibold text-text-dark">
-                            Digital Wallet Web Application – Product & UX Development
-                        </span>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="wallet" class="inline w-4 h-4 mr-1"></i>UX/Product Strategy</span>
+            <!-- Track 2: Software Development & Web Engineering -->
+            <h3 class="text-2xl font-bold text-primary mt-8 mb-4 flex items-center">
+                <i data-lucide="layout-grid" class="w-6 h-6 mr-2 text-secondary"></i>Software & Web Engineering
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+                <!-- Project 3: EcoSense AI -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">EcoSense AI -- Interactive Sustainability Platform</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">Live Hosted</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Architected and deployed a production web platform featuring an in-browser conversational RAG engine with inverted indexing, multi-category carbon calculator, and real-time Chart.js telemetry dashboards.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">React 19</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Vite</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Tailwind CSS</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Client-Side AI</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Vercel</span>
+                        </div>
                     </div>
-                    <p class="text-text-muted mb-3">Designed and developed a prototype (<span class="font-bold">PRD, wireframes, UI</span>) after comprehensive market and competitor research. Focused on improving transaction efficiency through user-centric design.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Figma, Excel, Market Research Tools, HTML/CSS/JS (Frontend).
-                    </p>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <a href="https://ecosense-ai-dun.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition">
+                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>Live App Demo
+                        </a>
+                        <a href="https://github.com/Soma-Chatterjee/ecosense-ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-text-dark hover:text-primary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>GitHub Repo
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Project 5 (School Management System) --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xl font-semibold text-text-dark">
-                            School Management System – Product Improvement & AI Integration
-                        </span>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="monitor-dot" class="inline w-4 h-4 mr-1"></i>Analysis & Feature Design</span>
+                <!-- Project 4: Student Club Backend -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">Student Club Management Backend -- RESTful Service</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">Node.js API</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Built a modular server-side backend implementing MVC architecture with dedicated controllers, routes, and middleware. Features secure JWT authentication, bcrypt password hashing, and CORS-hardened API endpoints.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Node.js</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Express.js</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">JWT</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">bcryptjs</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">MongoDB</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">REST APIs</span>
+                        </div>
                     </div>
-                    <p class="text-text-muted mb-3">Analyzed an existing system, proposed feature enhancements based on market gaps, and redesigned key UIs. Proposed integration of <span class="font-bold">AI-powered tools</span> for task automation (e.g., attendance).</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Figma, AI Tool Integrations (Chatbots), Excel, Market Research Tools.
-                    </p>
-                </div>
-                
-                <!-- NEW Project 6 (Time Management & Productivity App) --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="550">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xl font-semibold text-text-dark">
-                            Time Management & Productivity App – UX & Frontend Design
-                        </span>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="timer" class="inline w-4 h-4 mr-1"></i>UX & Frontend Design</span>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <a href="https://github.com/Soma-Chatterjee/student-club-appp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>GitHub Repository
+                        </a>
                     </div>
-                    <p class="text-text-muted mb-3">Designed a time-management application focusing on <span class="font-bold">productivity tracking and task scheduling</span>. Created <span class="font-bold">wireframes, user flows, and aesthetic UI screens</span>, and developed the initial frontend layouts. The project emphasized improving <span class="font-bold">user habit formation</span> through intuitive design and structured daily planning features.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Figma, HTML/CSS/JS, Canva.
-                    </p>
                 </div>
 
-                <!-- NEW Project 7 (Freelance Logo & Portfolio Website Designing) --><div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50" data-aos="fade-up" data-aos-delay="600">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xl font-semibold text-text-dark">
-                            Freelance Logo & Portfolio Website Designing
-                        </span>
-                        <span class="text-sm text-text-muted bg-primary/10 px-3 py-1 rounded-full"><i data-lucide="palette" class="inline w-4 h-4 mr-1"></i>Freelance | Web Design</span>
+            </div>
+
+            <!-- Track 3: Product Analysis, Systems & Innovation -->
+            <h3 class="text-2xl font-bold text-primary mt-8 mb-4 flex items-center">
+                <i data-lucide="lightbulb" class="w-6 h-6 mr-2 text-secondary"></i>Product Strategy, AI & Systems
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Project 5: AI Query & Validation System -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">AI Query & Validation System</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">SIH Finalist</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Led end-to-end process design for an automated query-processing workflow, defining validation requirements and API specifications. Optimized evaluation logic to achieve a <span class="font-bold text-primary">40% reduction in processing latency</span>; earned top finalist distinction among 500+ national teams.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">NLP Engine</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">API Design</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Python</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">SQL Telemetry</span>
+                        </div>
                     </div>
-                    <p class="text-text-muted mb-3">Designed <span class="font-bold">logos</span> and created visually appealing <span class="font-bold">portfolio websites</span> for multiple clients on a freelance basis. Delivered <span class="font-bold">brand-consistent visuals</span>, custom UI layouts, and responsive website sections aligned with client requirements. Strengthened design thinking and brand identity skills through real-world projects.</p>
-                    <p class="text-sm text-text-dark font-medium">
-                        <span class="font-bold">Tech Used:</span> Canva, Figma, HTML/CSS/JS.
-                    </p>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <span class="inline-flex items-center text-sm font-semibold text-secondary">
+                            <i data-lucide="award" class="w-4 h-4 mr-1"></i>Smart India Hackathon Finalist
+                        </span>
+                    </div>
                 </div>
+
+                <!-- Project 6: SkillForge -->
+                <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h4 class="text-lg font-bold text-text-dark">SkillForge -- AI Adaptive Learning Platform</h4>
+                            <span class="text-xs text-primary font-semibold bg-tag-bg px-2.5 py-0.5 rounded-full whitespace-nowrap">Infosys Springboard</span>
+                        </div>
+                        <p class="text-text-muted text-sm mb-4 leading-relaxed">
+                            Managed end-to-end development from workflow wireframes through backend implementation and automated assessment workflows. Achieved 92% code quality rating with zero critical release defects.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Java</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Database Integration</span>
+                            <span class="text-xs bg-accent-pink/30 text-text-dark px-2 py-0.5 rounded font-medium">Agile / Scrum</span>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-accent-pink/30 flex space-x-4">
+                        <a href="https://github.com/Soma-Chatterjee/Skill-forge" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i>GitHub Repository
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
         </section>
 
-        <!-- 6. CONTACT FOOTER --><section id="contact" class="text-center py-12 border-t border-accent-pink" data-aos="fade-up" data-aos-delay="650">
-            <h2 class="text-3xl font-bold text-primary mb-4">Get In Touch</h2>
-            <p class="text-xl text-text-dark mb-6">I'm currently seeking new opportunities in Cybersecurity, Product Analysis, and Web Development. Feel free to connect!</p>
-            <a href="mailto:somac1231@gmail.com"
-                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-primary hover:bg-primary/80 transition duration-300 transform hover:scale-105"
-            >
-                <i data-lucide="send" class="w-5 h-5 mr-2"></i>
-                Email Me: somac1231@gmail.com
-            </a>
+        <!-- 6. CERTIFICATIONS -->
+        <section id="certifications" class="mb-16" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-3xl section-title">Certifications</h2>
+            <div class="bg-card-bg p-6 rounded-xl card-shadow border border-accent-pink/50">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-3 bg-background-light rounded-lg border border-accent-pink/30">
+                        <p class="font-semibold text-text-dark text-sm">Google Cloud Computing Foundations</p>
+                        <p class="text-xs text-text-muted mt-1">Data, ML & AI</p>
+                    </div>
+                    <div class="p-3 bg-background-light rounded-lg border border-accent-pink/30">
+                        <p class="font-semibold text-text-dark text-sm">AWS Academy Cloud Foundations</p>
+                        <p class="text-xs text-text-muted mt-1">Cloud Infrastructure</p>
+                    </div>
+                    <div class="p-3 bg-background-light rounded-lg border border-accent-pink/30">
+                        <p class="font-semibold text-text-dark text-sm">Build & Secure Networks</p>
+                        <p class="text-xs text-text-muted mt-1">Google Cloud</p>
+                    </div>
+                    <div class="p-3 bg-background-light rounded-lg border border-accent-pink/30">
+                        <p class="font-semibold text-text-dark text-sm">Google Security Operations</p>
+                        <p class="text-xs text-text-muted mt-1">Unified SecOps</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT FOOTER -->
+        <section id="contact" class="text-center py-12 border-t border-accent-pink" data-aos="fade-up" data-aos-delay="350">
+            <h2 class="text-3xl font-bold text-primary mb-3">Get In Touch</h2>
+            <p class="text-lg text-text-dark mb-6 max-w-xl mx-auto">
+                Open to opportunities in <span class="font-bold text-primary">Product Management (APM / Product Analyst)</span>, as well as <span class="font-semibold">Full-Stack Software Engineering</span> and <span class="font-semibold">Cybersecurity</span>. Let's connect!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:somac1231@gmail.com"
+                    class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-primary hover:bg-primary/90 transition duration-300 transform hover:scale-105"
+                >
+                    <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                    Email: somac1231@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/soma-chatterjee-" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-semibold rounded-full shadow text-primary bg-white hover:bg-tag-bg transition duration-300 transform hover:scale-105"
+                >
+                    <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i>
+                    Connect on LinkedIn
+                </a>
+            </div>
         </section>
 
     </main>
 
     <footer class="text-center py-6 bg-accent-pink text-text-dark text-sm">
-        <p>&copy  Soma Chatterjee </p>
-        <!-- Initialize AOS Library BEFORE its functions are called --><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- Initialize Lucide Icons and AOS --><script>
+        <p>&copy; 2026 Soma Chatterjee. All rights reserved.</p>
+        <!-- Initialize AOS Library BEFORE its functions are called -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Initialize Lucide Icons and AOS -->
+        <script>
             lucide.createIcons();
             AOS.init({
-                duration: 800, // values from 0 to 3000, with step 50ms
-                easing: 'ease-out-quad', // default easing for AOS animations
-                once: true, // whether animation should happen only once - while scrolling down
+                duration: 800,
+                easing: 'ease-out-quad',
+                once: true,
             });
         </script>
     </footer>
